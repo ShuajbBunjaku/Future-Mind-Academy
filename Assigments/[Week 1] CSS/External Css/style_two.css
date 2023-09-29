@@ -8,5 +8,6 @@ h1 {
 }
 
 p {
-    border: 1;
+    padding: 10px;
+    background-color: greenyellow;
 }
