@@ -13,14 +13,14 @@
     box-shadow: 2px 2px 2px grey;
 }
 
-.light_new {
+.light .new {
     background-color: lightgrey;
     color: black;
     border: 2px solid yellow;
     box-shadow: 2px 2px 2px grey;
 }
 
-.dark_new {
+.dark .new {
     background-color: black;
     color: white;
     border: 2px solid yellow;
