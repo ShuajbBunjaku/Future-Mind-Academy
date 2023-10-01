@@ -1,0 +1,25 @@
+h1 {
+    color: blue;
+}
+nav {
+    opacity: .7;
+    background-image: url(images/wood.jpg);
+}
+body {
+    background-image: url(images/wood.jpg);
+}
+
+ main  p {
+    color: blue;
+    background: rgb(131, 9, 9);
+    background: linear-gradient(69deg, rgba(131, 9, 9, 1) 13%, rgba(24, 20, 20, 1) 79%);
+    width: 1000px;
+}
+
+.highlight {
+    color: yellowgreen;
+}
+footer {
+    color: chartreuse;
+}
+
