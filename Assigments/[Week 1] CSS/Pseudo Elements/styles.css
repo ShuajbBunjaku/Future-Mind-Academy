@@ -1,0 +1,11 @@
+body {
+    background-color: blueviolet;
+}
+
+p:hover {
+    background-color: rgb(255, 111, 123);
+}
+
+p:hover::first-letter {
+    font-size: 30px;
+}
