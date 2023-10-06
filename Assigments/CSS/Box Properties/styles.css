@@ -1,0 +1,16 @@
+img {
+    float: left;
+    border: 1px;
+    border-style: solid;
+    border-color: rgb(230, 10, 10);
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+}
+p {
+    font-size: larger;
+    clear: both;
+}
+img:hover {
+    cursor: pointer;
+}
