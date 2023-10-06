@@ -3,10 +3,10 @@ h1 {
 }
 nav {
     opacity: .7;
-    background-image: url(images/wood.jpg);
 }
 body {
     background-image: url(images/wood.jpg);
+    background-size: cover;
 }
 
  main  p {
