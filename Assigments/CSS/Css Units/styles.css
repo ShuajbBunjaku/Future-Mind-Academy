@@ -1,0 +1,16 @@
+section{
+    height: 25vh;
+}
+section:nth-child(odd) {
+    background-color: gray;
+    float: left;
+}
+section:nth-child(even){
+    background-color: black;
+    float: left;
+    color: white;
+}
+hr {
+    width: 33%;
+    border: 1px solid red;
+}
