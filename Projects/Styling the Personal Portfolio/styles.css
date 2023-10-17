@@ -103,11 +103,13 @@ tr:nth-child(1n+2) {
 .projects span {
     background-color: red;
     position: relative;
-    bottom: 5px;
-}
-span {
+    bottom: 10px;
     border-radius: 10px;
     border: 1px solid red;
+    padding: 5px;
+}
+span {
+   
 }
 footer {
     border-radius: 25px;
