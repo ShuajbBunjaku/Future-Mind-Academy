@@ -1,0 +1,177 @@
+body {
+    background-image: url(images/images.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: url('cursor/cursor.svg'), auto;
+    text-align: center;
+}
+header nav {
+    background-color: blue;
+    margin: 30px;
+    display: inline;
+    padding: 10px;
+    border: 1px solid black;  
+    border-radius: 10px;
+}
+header nav:hover {
+    background-color: cyan;
+    
+}
+a:hover {
+    cursor: url('cursor/hover.svg'), auto;   
+}
+header {
+    text-align: center;
+    color: white;
+}
+.nav {
+    background-color: gainsboro;
+}
+.nav:hover {
+    background-color: rgb(92, 88, 88);
+}
+.nav ul {
+    list-style: none;
+    padding-left: 20px;
+}
+.me {
+    text-align: center;
+    background-color: lightgreen;
+}
+.me:hover {
+    background-color: rgba(62, 172, 62, 1);
+}
+image {
+    padding: 10px; 
+}
+h1 {
+    font-size: 2em;
+}
+.ed{
+    background-color: aquamarine;
+}
+.ed:hover {
+    background-color: rgb(65, 230, 175);
+}
+.ed ul {
+    list-style: none;
+    padding-left: 0;
+}
+li ul {
+    margin-left: 50px;
+}
+.ed li {
+    border: 3px solid black;
+    margin: 10px;
+}
+.ed h2 {
+    margin: 10px;
+}
+.color {
+    background-color: antiquewhite; 
+    border-radius: 10px;
+}
+table {
+    border-collapse: collapse;
+}
+#table {
+    padding: 50px;
+    background-color: blueviolet;
+}
+#table:hover {
+    background-color: rgb(50, 4, 90);
+    border-collapse: collapse;
+}
+#tr1 {
+    background-color: darkgreen;
+}
+.tr2:nth-child(1) {
+    background-color: darkgreen;
+}
+tr:nth-child(1n+2) {
+    background: lightgreen;
+}
+.projects {
+    background-color: rgb(53, 41, 214);
+}
+.projects ol {
+    list-style: none;
+}
+.projects:hover {
+    background-color: rgb(8, 0, 114);
+}
+.projects span {
+    background-color: red;
+    position: relative;
+    bottom: 5px;
+}
+footer {
+    border-radius: 25px;
+    position: relative;
+    background-color: rgba(43, 37, 37, 1) ;
+    margin: 30px;
+    padding: 10px;
+}
+footer p {
+    font-size: 20px;
+    text-align: center;
+}
+#mp {
+    color: white;
+}
+#p1 {
+    background-color: blanchedalmond;
+}
+#p1:hover {
+    background-color: rgb(236, 148, 40);
+}
+#p2 {
+    background-color: rgb(1, 82, 15);
+}
+#p2:hover {
+    background-color: rgb(34, 231, 16);
+}
+#p3 {
+    background-color: rgb(9, 174, 240);
+}
+#p3:hover {
+    background-color: rgb(6, 96, 119);
+}
+.form {
+    background-color: crimson;
+}
+.form:hover {
+    background-color: rgb(94, 4, 22);
+}
+.form h2 {
+    margin: 0;
+}
+#contacts {
+    background-color: darkgoldenrod;
+}
+#contacts:hover {
+    background-color: rgb(255, 18, 18);
+}
+section {
+    border-radius: 25px;
+    margin: 30px;
+    padding: 10px;
+}
+section:hover {
+    border: 4px solid rgb(9, 115, 236);
+    cursor: url('cursor/hover.svg'), auto;
+    box-shadow: 2px 2px 2px 2px rgba(36, 31, 26, 0.8);
+}
+article {
+    border-radius: 25px;
+    margin: 30px;
+    padding: 10px;
+}
+article:hover {
+    border: 4px solid rgb(9, 115, 236);
+    cursor: url('cursor/hover.svg'), auto;
+    box-shadow: 2px 2px 2px 2px rgba(36, 31, 26, 0.8);
+}
+.contacts:hover {
+    width: 75px;
+}
