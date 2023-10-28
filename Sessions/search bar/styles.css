@@ -1,0 +1,24 @@
+body {
+    display: flex;
+}
+.search {
+    width: 15em;
+    padding: 0.5em;
+    margin: 1em;
+    border-radius: 7em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: inset 0px 0px 20px lightgrey;
+}
+.search-bar {
+   flex-grow: 1;
+   border-end-end-radius: none;
+   background-color: transparent;
+   outline: none;
+   font-size: 1.2em;
+   color: inherit;
+}
+.search-icon {
+    width: 1.5em;
+}

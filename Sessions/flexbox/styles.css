@@ -1,0 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+}
+.col-1 {
+    background: url(images/nav-bgr.png) no-repeat;
+    background-position: 0px -200px;
+    background-color: aquamarine;
+    flex: 1;
+}
+.col-2 {
+    background: green;
+    flex: 5;
+}
+.sidebar {
+    background-color: rgba(0, 0, 0, 0.3);
+    min-height: 100vh;
+    padding-top: 20px;
+}
+header {
+    min-height: 20vh;
+    background-color: aquamarine;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+}
+.content article {
+    flex: 3;
+    min-height: 70vh;
+}
+.content aside {
+    flex: 1;
+    background-color: chocolate;
+}
+footer {
+    min-height: 10vh;
+    background-color: burlywood;
+}
+ header , article , aside ,footer {
+    padding: 1em;
+}

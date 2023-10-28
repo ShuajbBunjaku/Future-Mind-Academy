@@ -1,0 +1,149 @@
+Answer 1
+#pond{
+  display: flex;
+justify-content : flex-end;
+}
+Answer 2
+#pond {
+  display: flex;
+justify-content: center;
+}
+Answer 3
+#pond {
+  display: flex;
+justify-content : space-around;
+}
+Answer 4
+#pond {
+  display: flex;
+justify-content: space-between;
+}
+Answer 5
+#pond {
+  display: flex;
+align-items: flex-end;
+}
+Answer 6
+#pond {
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+Answer 7
+#pond {
+  display: flex;
+justify-content: space-around;
+align-items: flex-end ;
+}   
+Answer 8
+#pond {
+  display: flex;
+flex-direction:row-reverse;
+}
+Answer 9
+#pond {
+  display: flex;
+flex-direction: column;
+}
+Answer 10
+#pond {
+  display: flex;
+flex-direction: column;
+}
+Answer 11
+#pond {
+  display: flex;
+flex-direction : column ;
+justify-content : flex-end;
+}
+Answer 12
+#pond {
+  display: flex;
+justify-content: space-between;
+flex-direction: column-reverse;
+}
+Answer 13
+#pond {
+  display: flex;
+flex-direction : row-reverse;
+align-items: flex-end ;
+justify-content: center;
+}
+Answer 14
+#pond {
+  display: flex;
+}
+
+.yellow {
+order : 1;
+}
+Answer 15
+#pond {
+  display: flex;
+}
+
+.red {
+order :-3;
+}
+Answer 16
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+align-self: flex-end;
+}
+Answer 17
+#pond {
+  display: flex;
+  align-items: flex-start;
+}
+
+.yellow {
+order: 2;
+align-self : flex-end;
+}
+Answer 18
+#pond {
+  display: flex;
+flex-wrap : wrap;
+}
+Answer 19
+#pond {
+  display: flex;
+flex-wrap : wrap;
+flex-direction: column;
+}
+Answer 20
+#pond {
+  display: flex;
+flex-flow: column wrap;
+}
+Answer 21
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content: flex-start;
+}
+Answer 22
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content: flex-end ;
+}
+Answer 23
+#pond {
+  display: flex;
+  flex-wrap: wrap;
+align-content : center;
+flex-direction: column-reverse;
+}
+Answer 24
+#pond {
+  display: flex;
+flex-direction : column-reverse;
+flex-wrap: wrap-reverse;
+align-content: space-between
+justify-content:center;
+}

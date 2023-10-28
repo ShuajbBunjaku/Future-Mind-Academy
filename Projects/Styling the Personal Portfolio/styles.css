@@ -4,6 +4,7 @@ body {
     background-size: cover;
     cursor: url('cursor/cursor.svg'), auto;
     text-align: center;
+    
 }
 header nav {
     background-color: blue;
@@ -13,9 +14,15 @@ header nav {
     border: 1px solid black;  
     border-radius: 10px;
 }
+ul {
+    padding: 0;
+}
 header nav:hover {
     background-color: cyan;
-    
+}
+a {
+    text-decoration: none;
+    color: white;
 }
 a:hover {
     cursor: url('cursor/hover.svg'), auto;   
@@ -32,7 +39,6 @@ header {
 }
 .nav ul {
     list-style: none;
-    padding-left: 20px;
 }
 .me {
     text-align: center;
@@ -43,6 +49,10 @@ header {
 }
 image {
     padding: 10px; 
+    width: 400px;
+}
+img:hover {
+    width: 450px;
 }
 h1 {
     font-size: 2em;
@@ -58,7 +68,7 @@ h1 {
     padding-left: 0;
 }
 li ul {
-    margin-left: 50px;
+    padding: 10px;
 }
 .ed li {
     border: 3px solid black;
@@ -109,10 +119,10 @@ tr:nth-child(1n+2) {
     padding: 5px;
 }
 footer {
-    border-radius: 25px;
+    border-radius: 25px 25px 0 0;
     position: relative;
     background-color: rgba(43, 37, 37, 1) ;
-    margin: 30px;
+    margin: 0 30px -7px 30px;
     padding: 10px;
 }
 footer p {
@@ -128,6 +138,9 @@ footer p {
 #p1:hover {
     background-color: rgb(236, 148, 40);
 }
+#p1 img:hover {
+    width: 750px;
+}
 #p2 {
     background-color: rgb(1, 82, 15);
 }
@@ -140,6 +153,12 @@ footer p {
 #p3:hover {
     background-color: rgb(6, 96, 119);
 }
+#p3 img {
+    width:700px ;
+}
+#p3 img:hover {
+    width: 750px;
+}
 .form {
     background-color: crimson;
 }
@@ -148,6 +167,12 @@ footer p {
 }
 .form h2 {
     margin: 0;
+}
+input {
+    font-family: inherit;
+}
+.submit {
+    padding: 10px;
 }
 #contacts {
     background-color: darkgoldenrod;
