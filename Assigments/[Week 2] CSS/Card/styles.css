@@ -9,7 +9,6 @@ body {
     border: 2px solid black;
     box-shadow: 5px 5px 5px  rgb(143, 143, 143);
     flex-wrap: wrap;
-    
 }
 .card-top {
     display: flex;
