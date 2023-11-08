@@ -9,6 +9,7 @@ body {
 }
 .header {
     flex: 1;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -17,36 +18,37 @@ body {
     text-align: right;
     padding: 0 20px;
 }
+
 .h1 {
     margin: 0;
 }
 .p {
     margin: 0;
+    font-weight: 400;
 }
 button {
+    margin-left: 14em;
+    width: 70px;
     background-color: transparent;
     border: 2px solid rgb(177, 172, 172);
     color: rgb(165, 165, 165);
     padding: 10px;
 }
+button:hover {
+    cursor: pointer;
+    padding: 12px;
+    background-color: rgb(13, 13, 204);
+}
 .section {
     padding: 3em;
 }
-.pfp {
-    width: 3em;
-    height: 3em;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    position: relative;
-    left: 60em;
+.section-2 {
+    padding: 0 3em;
 }
-.pfp-2 {
+img {
     width: 3em;
     height: 3em;
-    border: 2px solid transparent;
     border-radius: 50%;
-    position: relative;
-    left: 59em;
 }
 .pinned-post {
     color: grey;
@@ -55,8 +57,7 @@ button {
 
     font-size: 2em;
 }
-.color {
-    color: rgb(129, 203, 228);
+a {
     text-decoration: none;
 }
 .css {
@@ -67,18 +68,18 @@ button {
     background-color: rgb(4, 148, 245);
     padding: 0 8px 0 8px;
 }
+.div {
+    display: flex;
+    justify-content: space-between;
+}
 .info {
     padding-bottom: 10px;
-    position: relative;
 }
 .hidden {
     visibility: hidden;
 }
 .paragraph {
     padding-bottom: 0;
-}
-.section-2 {
-    padding: 0 3em 0 3em;
 }
 .js {
     background-color: red;
