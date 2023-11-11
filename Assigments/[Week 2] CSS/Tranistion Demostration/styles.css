@@ -1,0 +1,16 @@
+button {
+    margin: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: grey;
+    border: 2px solid black;
+    cursor: pointer;
+    transition-property: background-color , transform;
+    transition-duration: 0.4s , 0.1s;
+    transition-timing-function: ease-in;
+}
+button:hover {
+    background-color: aqua;
+    color: white;
+    transform: scale(1,2);
+}

@@ -14,14 +14,14 @@ body {
     background-color: aquamarine;
     flex: 1;
 }
-.col-2 {
-    background: green;
-    flex: 5;
-}
 .sidebar {
     background-color: rgba(0, 0, 0, 0.3);
     min-height: 100vh;
     padding-top: 20px;
+}
+.col-2 {
+    background: green;
+    flex: 5;
 }
 header {
     min-height: 20vh;
