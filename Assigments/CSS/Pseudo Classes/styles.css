@@ -1,13 +1,19 @@
-main {
-    word-spacing: 50px; 
+body {
+    word-spacing: 50px;
 }
-p:nth-child(even) {
-    
+table {
+    width: 50px;
+}
+td {
+    padding: 20px;
+}
+tr:nth-child(even) {
     padding: 10px;
-    background-color: darkgreen;
+    background-color: green;
+    color: white ;
 }
-p:nth-child(odd) {
-   
+tr:nth-child(odd) { 
     padding: 10px;
     background-color: greenyellow;
+    color: white;
 }

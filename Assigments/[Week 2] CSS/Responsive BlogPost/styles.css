@@ -1,0 +1,96 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr;
+    overflow-x: hidden;
+}
+@media (min-width:600px) {
+    body {
+        display: flex;
+        flex: 3;
+        flex-direction: row;
+    }
+    .header {
+        flex: 1;
+    }
+}
+.header {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 107);
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    padding-right: 20px;
+    color: white;
+}
+.header h1 {
+    margin: 0;
+}
+
+.header p {
+    font-size: 1.5em;
+}
+
+.button {
+    width: 70px;
+    background-color: transparent;
+    border: 2px solid rgb(177, 172, 172);
+    color: rgb(165, 165, 165);
+    padding: 10px;
+}
+
+.button:hover {
+    background-color: rgb(18, 18, 151);
+    padding: 12px;
+}
+
+.hr {
+    text-transform: uppercase;
+    color: grey;
+}
+
+main {
+    grid-column: 5fr;
+    margin: 0 50px;
+}
+
+.sectionDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+a {
+    text-decoration: none;
+}
+
+.css {
+    background-color: green;
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+.html {
+    background-color: lightblue;
+    margin: 0 4px;
+    padding: 0 4px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.section-2 {
+    margin-top: 100px;
+}
+
+.js {
+    background-color: rgb(255, 86, 86);
+    padding: 0 4px;
+}

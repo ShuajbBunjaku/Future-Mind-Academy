@@ -52,10 +52,23 @@ body {
 .span{
     position: relative;
     top: 7px;
+    padding: 10px;
+    border-radius: 50%;
+} 
+.span:hover {
+    cursor: pointer;
+}
+ .hover{
+    position: relative;
+    top: 7px;
     background-color: white;
     padding: 10px;
     border-radius: 50%;
 } 
+.hover:hover {
+    box-shadow: 0px  0 5px black;
+    cursor: pointer;
+}
 .section1 {
     display: flex;
     align-items: center;
@@ -64,18 +77,19 @@ body {
 .dashboard p {
     margin-left: 10px;
 }
-
 .settings input {
     padding: 5px;
-    border-radius: 15px;
+    background-color: whitesmoke;
+    border: 0;
+    outline: none;
     border-bottom: 1px solid black;
 }
-.settings:nth-child(3) {
-    position: relative;
+.notificationsDiv {
+    display: none;
+    transition: 1s display ;
 }
-.notifications {
-    background-color: red;
-    position: relative;
+.notifications:hover  .notificationsDiv {
+    display: block;
 }
 .red {
     background-color: rgba(255, 0, 0, 0.658);

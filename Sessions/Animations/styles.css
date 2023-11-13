@@ -1,0 +1,19 @@
+h1 {
+    padding: 10px;
+    border: 2px solid black;
+    text-align: center;
+    animation: my-cool-animation;
+    animation-duration: 5s;
+    animation-delay: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes my-cool-animation {
+    from {
+        color: black;
+        background-color: white;
+    }
+    to {
+        color: white;
+        background-color: black;
+    }
+}
