@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,155 +16,445 @@
 </head>
 
 <body>
-        <header class="aside">
-            <h1>CP Cool Page</h1>
-            <hr>
-            <div class="info">
-                <div class="avatar">
-                    <img class="pfp" src="images/avatar.jpg" alt="Avatar">
-                    <p>John Doe</p>
-                </div>
-                <span class="material-symbols-outlined">
-                    expand_more
-                </span>
+    <aside class="aside">
+        <div class="info">
+            <h1>CP <span>Cool Page</span> </h1>
+        </div>
+        <hr>
+        <div class="info hoverEffect">
+            <div class="avatar">
+                <img class="pfp" src="assets/images/avatar.jpg" alt="Avatar">
+                <p>John Doe</p>
             </div>
-            <hr>
-            <div class="info red">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        dashboard
-                    </span>
-                    <p>Dashboard</p>
-                </div>
-            </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        imagesmode
-                    </span>
-                    <p>Pages</p>
-                </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <hr>
+        <div class="info red">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    dashboard
                 </span>
+                <p>Dashboard</p>
             </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        apps
-                    </span>
-                    <p>Components</p>
-                </div>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    imagesmode
                 </span>
+                <p>Pages</p>
             </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        content_paste
-                    </span>
-                    <p>Forms</p>
-                </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    apps
                 </span>
+                <p>Components</p>
             </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        table
-                    </span>
-                    <p>Tables</p>
-                </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    content_paste
                 </span>
+                <p>Forms</p>
             </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        location_on
-                    </span>
-                    <p>Maps</p>
-                </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    table
                 </span>
+                <p>Tables</p>
             </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        widgets
-                    </span>
-                    <p>Widgets</p>
-                </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    location_on
                 </span>
+                <p>Maps</p>
             </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        trending_up
-                    </span>
-                    <p>Charts</p>
-                </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    widgets
                 </span>
+                <p>Widgets</p>
             </div>
-            <div class="info">
-                <div class="avatar">
-                    <span class="material-symbols-outlined">
-                        date_range
-                    </span>
-                    <p>Calendar</p>
-                </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
                 <span class="material-symbols-outlined">
-                    expand_more
+                    trending_up
                 </span>
+                <p>Charts</p>
+            </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+        <div class="info hoverEffect">
+            <div class="avatar">
+                <span class="material-symbols-outlined">
+                    date_range
+                </span>
+                <p>Calendar</p>
+            </div>
+            <span class="material-symbols-outlined">
+                expand_more
+            </span>
+        </div>
+    </aside>
+    <div class="main">
+        <header class="section1">
+            <div class="section1Div">
+                <div class="dashboard">
+                    <span class="dashboardSpan tablet">
+                        <span class="material-symbols-outlined span hover tablet" title="See more">
+                            more_vert
+                        </span>
+                    </span>
+                    <span>Dashboard</span>
+                </div>
+                <div class="menu">
+                    <div>
+                        <span class="material-symbols-outlined  cursor" title="Menu">
+                            menu
+                        </span>
+                    </div>
+                </div>
+                <div class="settings tablet">
+                    <div class="tablet">
+                        <span class="settingsSpan">
+                            <input class="search" type="text" placeholder="Search">
+
+                            <span class="material-symbols-outlined span hover searchIcon" title="Search">
+                                search
+                            </span>
+                        </span>
+                    </div>
+                    <div class="tablet">
+                        <span class="settingsSpan">
+                            <span class="material-symbols-outlined span" title="Dashboard">
+                                browse
+                            </span>
+                        </span>
+                    </div>
+                    <div class="notifications tablet">
+                        <div class="notificationDiv relative">
+                            <span class="material-symbols-outlined span " title="Notifications">
+                                notifications
+                            </span>
+                            <div class="notification5">5</div>
+                        </div>
+                        <div class="hidden">
+                            <p>Joe Doe sent a message</p>
+                            <p>Someone viewed your profile</p>
+                            <p>Joe Doe sent a message</p>
+                            <p>Someone viewed your profile</p>
+                            <p>Another notification</p>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="settingsSpan tablet">
+                            <span class="material-symbols-outlined span" title="Profile">
+                                person
+                            </span>
+                        </span>
+                    </div>
+                </div>
             </div>
         </header>
-    <main class="main">
-        <section class="section">
-            <div class="section1">
-                <div class="dashboard">
-                <span class="material-symbols-outlined span hover">
-                    more_vert
-                </span>
-                Dashboard
-            </div>
-                <div class="settings">
-                    <input type="text" placeholder="Search" >
-                    <span class="material-symbols-outlined span hover">
-                        search
-                        </span> 
-                    <span class="material-symbols-outlined span">
-                        browse
-                        </span>
-                    <span class="material-symbols-outlined span notifications">
-                        notifications
-                            <div class="notificationsDiv">
-                                <p>Joe Doe sent a massage</p>
-                                <p>Someone viewed your profile</p>
-                                <p>Joe Doe sent a massage</p>
-                                <p>Someone viewed your profile</p>
-                                <p>Another notification</p>
-                            </div>
+        <main>
+            <section class="section2">
+                <div class="displayI">
+                    <span class="material-symbols-outlined icon" title="Statisics">
+                        language
                     </span>
-                    <span class="material-symbols-outlined span">
-                            person
-                    </span>
+                    <h2>Global Sales by Top Locations</h2>
                 </div>
+                <div class="section2Div">
+                    <div class="statisics">
+                        <div class="statisicsInfo">
+                            <div>
+                                <span class="center"><img class="flag" src="assets/flags/usa.svg"
+                                        alt="Usa"><span>Usa</span></span>
+                            </div>
+                            <span>2.920 <span>53.23% </span> </span>
+                        </div>
+                        <hr>
+                        <div class="statisicsInfo">
+                            <span class="center"><img class="flag" src="assets/flags/germany.svg"
+                                    alt="Germany"><span>Germany</span></span>
+                            <span>1.300 <span>4.34%</span> </span>
+                        </div>
+                        <hr>
+                        <div class="statisicsInfo">
+                            <span class="center"><img class="flag" src="assets/flags/au.svg"
+                                    alt="Australia"><span>Australia</span></span>
+                            <span>760 <span>20.43% </span> </span>
+                        </div>
+                        <hr>
+                        <div class="statisicsInfo">
+                            <span class="center"><img class="flag" src="assets/flags/uk.svg" alt="Uk"><span>United
+                                    Kingdom</span></span>
+                            <span>690 <span>10.35% </span> </span>
+                        </div>
+                        <hr>
+                        <div class="statisicsInfo">
+                            <span class="center"><img class="flag" src="assets/flags/ro.svg"
+                                    alt="romania"><span>Romania</span></span>
+                            <span>600 <span>7.87% </span> </span>
+                        </div>
+                        <hr>
+                        <div class="statisicsInfo">
+                            <span class="center"><img class="flag" src="assets/flags/br.svg"
+                                    alt="brasil"><span>Brasil</span>
+                            </span>
+                            <span>550 <span>5.94%</span> </span>
+                        </div>
+                    </div>
+                    <div class="map">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387194.06225701555!2d-74.30932678804535!3d40.697019288954785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1699972606070!5m2!1sen!2s"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </section>
+            <section class="section3">
+                <div class="section3Div">
+                    <div class="gridSections">
+                        <div class="gridSection">
+                            <span class="material-symbols-outlined icon1 orange" title="Storage">
+                                chair
+                            </span>
+                            <div class="flexGrid displayI">
+                                <span class="grey">Bookings</span> <span class="bold">194</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="iconCenter">
+                            <span class="material-symbols-outlined warning grey cursor marginBottom" title="Warning">
+                                warning
+                            </span>
+                            <span class="grey marginBottom">Get more space</span>
+                        </div>
+                    </div>
+                    <div class="gridSections">
+                        <div class="gridSection">
+                            <span class="material-symbols-outlined icon1 pink" title="Analytics">
+                                bar_chart
+                            </span>
+                            <div class="flexGrid displayI">
+                                <span class="grey">Website Visits</span> <span class="bold">75.521</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="iconCenter">
+                            <span class="material-symbols-outlined warning grey cursor marginBottom" title="Sales">
+                                sell
+                            </span>
+                            <span class="grey marginBottom">Tracked from Google Analytics</span>
+                        </div>
+                    </div>
+                    <div class="gridSections">
+                        <div class="gridSection">
+                            <span class="material-symbols-outlined icon1 green " title="Stores">
+                                store
+                            </span>
+                            <div class="flexGrid displayI">
+                                <span class="grey">Revenue</span> <span class="bold">$34,245</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="iconCenter">
+                            <span class="material-symbols-outlined warning grey cursor marginBottom" title="Dates">
+                                date_range
+                            </span>
+                            <span class="grey marginBottom">Last 24 Hours</span>
+                        </div>
+                    </div>
+                    <div class="gridSections">
+                        <div class="gridSection">
+                            <span class="material-symbols-outlined icon1 blue" title="Media">
+                                globe
+                            </span>
+                            <div class="flexGrid displayI center">
+                                <span class="grey">Followers</span> <span class="bold">+245</span>
+                                <hr>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="iconCenter">
+                            <span class="material-symbols-outlined warning grey cursor marginBottom" title="Update Time">
+                                update
+                            </span>
+                            <span class="grey marginBottom">Just updated</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <h2 class="listings">Manage Lisiting</h2>
+            <section class="section4">
+                <div class="section4DIv">
+                    <div class="section4Div1">
+                        <div class="Section4Div2">
+                            <div class="cards">
+                                <img class="width cursor" src="assets/images/card-1.jpeg" alt="card1">
+                                <div class="marginB ">
+                                    <span class="material-symbols-outlined cursor" title="View">
+                                        overview_key
+                                    </span>
+                                    <span class="material-symbols-outlined edit cursor" title="Edit">
+                                        edit
+                                    </span>
+                                    <span class="material-symbols-outlined delete cursor" title="Delete">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="spanCenter">
+                                <h3>Cozy 5 Stars Apartament</h3>
+                                <p class="grey">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+                                    praesentium quis
+                                    asperiores vero neque suscipit maiores enim perspiciatis doloremque molestiae
+                                    molestias
+                                </p>
+                            </span>
+                        </div>
+                        <hr class="spanCenter">
+                        <div class="price spanCenter">
+                            <span>
+                                $899/night
+                            </span>
+                            <span class="center">
+                                <span class="material-symbols-outlined grey marginBottom">
+                                    location_on
+                                </span>
+                                <span class="grey marginBottom">Barclona, Spain</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section4DIv">
+                    <div class="section4Div1">
+                        <div class="Section4Div2">
+                            <div class="cards">
+                                <img class="width cursor" src="assets/images/card-2.jpeg" alt="card2">
+                                <div class="marginB ">
+                                    <span class="material-symbols-outlined cursor" title="View">
+                                        overview_key
+                                    </span>
+                                    <span class="material-symbols-outlined edit cursor" title="Edit">
+                                        edit
+                                    </span>
+
+                                    <span class="material-symbols-outlined delete cursor" title="Delete">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                            <span class="spanCenter">
+                                <h3>Office Stuido</h3>
+                                <p class="grey">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+                                    praesentium quis
+                                    asperiores vero neque suscipit maiores enim perspiciatis doloremque molestiae
+                                    molestias
+                                </p>
+                            </span>
+                        </div>
+                        <hr class="spanCenter">
+                        <div class="price spanCenter">
+                            <span class="marginBottom">
+                                $1.119/night
+                            </span>
+                            <span class="center">
+                                <span class="material-symbols-outlined grey marginBottom">
+                                    location_on
+                                </span>
+                                <span class="grey marginBottom">London, UK</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="section4DIv">
+                    <div class="section4Div1">
+                        <div class="Section4Div2">
+                            <div class="cards">
+                                <img class="width cursor" src="assets/images/card-3.jpeg" alt="card3">
+                                <div class="marginB">
+                                    <span class="material-symbols-outlined cursor" title="View">
+                                        overview_key
+                                    </span>
+                                    <span class="material-symbols-outlined edit cursor" title="Edit">
+                                        edit
+                                    </span>
+                                    <span class="material-symbols-outlined delete cursor" title="Delete">
+                                        close
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="spanCenter">
+                                <h3>Beatiful Castle</h3>
+                                <p class="grey">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem
+                                    praesentium quis
+                                    asperiores vero neque suscipit maiores enim perspiciatis doloremque molestiae
+                                    molestias
+                                </p>
+                            </div>
+                        </div>
+                        <hr class="spanCenter">
+                        <div class="price spanCenter">
+                            <span class="marginBottom">
+                                $459/night
+                            </span>
+                            <span class="center">
+                                <span class="material-symbols-outlined grey iconWidth marginBottom">
+                                    location_on
+                                </span>
+                                <span class="grey marginBottom">Milan, Italy</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <hr>
+            <div class="footerDiv">
+                <div class="footerDiv1Div">Home Company Portfolio Blog</div>
+                <div>&#169; John Doe</div>
             </div>
-        </section>
-        <section>
-            <span class="material-symbols-outlined">
-                language
-                </span>
-        </section>
-    </main>
+        </footer>
+    </div>
 </body>
 
 </html>
