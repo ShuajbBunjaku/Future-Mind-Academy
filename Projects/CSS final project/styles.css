@@ -39,7 +39,7 @@ body {
     font-weight: 500;
     margin-right: 10px;
 }
-.avatar , .Section4Div2 {
+.avatar {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -129,14 +129,26 @@ body {
     position: relative;
 }
 .notification5 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 13px;
+    width: 13px;
+    font-size: 0.8em;
     position: absolute;
-    top: 5px;
-    right: 10px;
+    top: 7px;
+    right: 5px;
     color: white;
     border: 1px solid white;
     background-color: red;
     border-radius: 50%;
-    padding: 1px;
+    padding: 2px;
 }
 .menu {
     display: none;
@@ -333,6 +345,7 @@ body {
     margin: 7vh 20px 0 20px;
     border-radius: 15px;
 }
+
 .edit {
     color: lightgreen;
 }
@@ -351,13 +364,27 @@ body {
 .section4Div1 {
     background-color: white;
     border-radius: 10px;
-    height: 90%;
 }
 .Section4Div2 {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: auto 1fr;
+    grid-template-rows: auto 1fr;
+}
+.spaceBetween {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.margin {
+    margin: 0 10px;
 }
 .width {
     width: 95%;
@@ -406,8 +433,6 @@ body {
 }
 .spanCenter {
     text-align: center;
-    position: relative;
-    bottom: 40px;
 }
 .price {
     padding: 10px;
