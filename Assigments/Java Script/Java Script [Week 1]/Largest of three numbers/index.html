@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let n1 = parseInt(prompt(`Write the first number`));
+        let n2 = parseInt(prompt(`Write the second number`));
+        let n3 = parseInt(prompt(`Write the third number`));
+        let largest;
+        if(n1 > n2 && n1 > n3){
+            largest=`The number ${n1} is the largest`;
+        }
+        else if (n2 > n1 && n2 > n3){
+            largest=`The number ${n2} is the largest`;
+        }
+        else if(n3 > n1 && n3 > n1){
+            largest=`The number ${n3} is the largest`;
+        }
+        console.log(largest)
+    </script>
+</body>
+</html>

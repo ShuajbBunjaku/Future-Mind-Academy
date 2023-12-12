@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="mainDiv">
+        <h1>The correct answer is <span id="answer"></span></h1>
+        <div id="div2">
+            <div id="p1">
+                <div>
+                    <h2>Player One</h2>
+                </div>
+                <div class="size">
+                    <span id="p1a"></span>
+                </div>
+            </div>
+            <div id="p2">
+                <div>
+                    <h2>Player Two</h2>
+                </div>
+                <div class="size">
+                    <span id="p2a"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        let answer = Math.floor(Math.random() * 20) + 1;
+        let playerOne = parseInt(prompt('Player one:'));
+        let playerTwo = parseInt(prompt('Player two:'));
+
+        if (isNaN(playerOne) || isNaN(playerTwo)) {
+            throw new Error('Please write only numbers!');
+        }
+
+        if ((playerOne < 0 || playerOne > 20) || (playerTwo < 0 || playerTwo > 20)) {
+            throw new Error('Only select numbers between 0-20');
+        }
+
+        let playerOneDistance = Math.abs(answer - playerOne);
+        let playerTwoDistance = Math.abs(answer - playerTwo);
+
+        let winner;
+
+        if (playerOneDistance < playerTwoDistance) {
+            winner = 'Player one';
+        } 
+        else {
+            winner = 'Player two';
+        }
+
+        let winnerColor = 'green';
+        let loserColor = 'red';
+
+        console.log(`The correct answer is ${answer}`);
+        console.log(`The winner is ${winner}`);
+
+        let answerSpan = document.getElementById('answer');
+        answerSpan.outerHTML = `${answer}`;
+
+        let player1a = document.getElementById('p1a');
+        player1a.outerHTML = playerOne;
+
+        let player2a = document.getElementById('p2a');
+        player2a.outerHTML = playerTwo;
+
+        let player1 = document.getElementById('p1');
+        player1.style.backgroundColor = winner === 'Player one' ? winnerColor : loserColor;
+
+        let player2 = document.getElementById('p2');
+        player2.style.backgroundColor = winner === 'Player two' ? winnerColor : loserColor;
+    </script>
+</body>
+
+</html>
