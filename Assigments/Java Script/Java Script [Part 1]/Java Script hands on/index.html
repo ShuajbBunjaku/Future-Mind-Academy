@@ -10,61 +10,53 @@
 
 <body>
     <script>
-        document.title = 'This is the new page title';
-
-
-        let faviconElement = document.querySelector("link[rel~='icon']")
-        faviconElement.href = 'https://newfaviconaaaa'
-
-
-        let defaultTitle = document.title;
+        let defualTitle = document.title;
         let faviconElement = document.querySelector("link[rel~='icon']");
-        let defaultFavicon = document.href;
+        let defaultFavicon = faviconElement.href;
 
-
-        let NotificationFavicon = 'https://asdasd'
-
-        let BellIconLink = getBellIconLink
+        let bellIconLink = getBellIconLink();
 
         let isInDefaultState = true;
-
-        let NotificationInterval
+        let notifactionInterval;
 
         function startNotification(message) {
-            if (NotificationInterval) {
+            if (notifactionInterval)
                 endNotification();
-            }
-            NotificationInterval = setInterval(() => {
+
+            notifactionInterval = setInterval(() => {
                 if (isInDefaultState)
-                    setToNotification(message);
+                    setToNotifaction(message);
                 else
-                    resetToDefaults();
+                    resetToDefualt();
 
-                isInDefaultState = !isInDefaultState
-            }, 1000)
+                isInDefaultState = !isInDefaultState;
+            }, 1000);
         }
+
         function endNotification() {
-            clearInterval(NotificationInterval)
-            resetToDefaults();
+            clearInterval(notifactionInterval);
+            resetToDefualt();
         }
 
-        function resetToDefaults() {
-            document.title = defaultTitle;
+        function resetToDefualt() {
+            document.title = defualTitle;
             faviconElement.href = defaultFavicon;
         }
-        function setToNotification(message) {
-            document.title = message;
-            faviconElement = NotificationFavicon;
-        }
-        function getBellIconLink() {
-            const canvas = document.createElement(`canvas`)
-            canvas.width = 32;
-            canvas.height = 32;
-            const context = canvas.getContext('2d');
-            context.font = "32px sans-sherif";
-            context.filltext('🔔', 0, 30);
 
-            return canvas.toDataURL('image/png')
+        function setToNotifaction(message) {
+            document.title = message;
+            faviconElement.href = bellIconLink;
+        }
+
+        function getBellIconLink() {
+            const canvas = document.createElement('canvas');
+            canvas.widh = 32;
+            canvas.height = 32;
+            const context = canvas.getContext('2D');
+            context.font = '32px sans-serif';
+            context.fillText('a', 0, 30);
+
+            return canvas.toDataURL('image/png');
         }
     </script>
 </body>
