@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let nameAndSurname = (name, surname) => {
+            let welcome = `Welcome ${name} ${surname} `
+            return welcome;
+        }
+        
+        let name = prompt('Whats your name')
+        let surname = prompt('Whats your surname')
+
+        let output = nameAndSurname(name , surname);
+
+        console.log(output)
+    </script>
+</body>
+
+</html>

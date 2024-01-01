@@ -7,11 +7,15 @@
 </head>
 <body>
     <script>
-
-        let string = function(userInput){
-            return userInput;
+        let isEven = function(number){
+            if (number % 2 === 0){
+                return true
+            } else {
+                return false
+            }
         }
-        let result = string();
+        let number = parseInt(prompt('Write a number'))
+        let result = isEven(number);
         console.log(result)
     </script>
 </body>
