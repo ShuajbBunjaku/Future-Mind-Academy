@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        let userInput;
-        let number = 0;
-        while(userInput !== 0){ 
-            userInput = parseInt(prompt('Type in a couple of numbers'))
-            number += userInput;
+        function helloWorld() {
+            for (let i = 0; i < 10; i++) {
+                console.log(`Hello World`);
+            }
         }
-        console.log(number)
+        helloWorld();
     </script>
 </body>
+
 </html>

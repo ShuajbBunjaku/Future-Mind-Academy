@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let guessedNumber = Math.floor((Math.random() * 6) + 1);
+        let userInput;
+        let counter = 0;
+        do{
+            userInput = parseInt(prompt(`Choose a number between 1-6`))
+            counter++
+        }
+        while(userInput !== guessedNumber)
+        alert(`You guessed the correct number in ${counter} ${counter === 1 ? 'try' : 'tries'}`)
+    </script>
+</body>
+</html>

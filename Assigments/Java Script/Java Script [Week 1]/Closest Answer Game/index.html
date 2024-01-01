@@ -50,13 +50,17 @@
 
         if (playerOneDistance < playerTwoDistance) {
             winner = 'Player one';
-        } 
+        }
         else {
             winner = 'Player two';
+        }
+        if(playerOneDistance === playerTwoDistance){
+            winner = 'Its a tie'
         }
 
         let winnerColor = 'green';
         let loserColor = 'red';
+        let tieColor = 'orange'
 
         console.log(`The correct answer is ${answer}`);
         console.log(`The winner is ${winner}`);

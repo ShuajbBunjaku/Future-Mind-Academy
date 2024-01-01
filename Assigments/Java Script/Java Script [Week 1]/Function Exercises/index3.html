@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function convertKilometersToMiles(kilometers) {
+            return kilometers * 0.621371;
+        }
+
+        let kilometersInput = parseFloat(prompt('Enter the number of kilometers:'));
+        let milesResult = convertKilometersToMiles(kilometersInput);
+
+        console.log(`${kilometersInput} kilometers is approximately ${milesResult} miles.`);
+    </script>
+</body>
+</html>

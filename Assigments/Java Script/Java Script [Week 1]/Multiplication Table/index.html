@@ -7,13 +7,11 @@
 </head>
 <body>
     <script>
-        let userInput;
-        let number = 0;
-        while(userInput !== 0){ 
-            userInput = parseInt(prompt('Type in a couple of numbers'))
-            number += userInput;
+        for(let i = 1; i <= 30 ; i++){
+            for(let j = 1; j <= 30 ; j++){
+                console.log(`${i} x ${j} = ${i * j}`)
+            }
         }
-        console.log(number)
     </script>
 </body>
 </html>

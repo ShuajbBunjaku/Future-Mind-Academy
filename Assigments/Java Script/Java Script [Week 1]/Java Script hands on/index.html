@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="icon" href="download.png">
+</head>
+
+<body>
+    <script>
+        document.title = 'This is the new page title';
+
+
+        let faviconElement = document.querySelector("link[rel~='icon']")
+        faviconElement.href = 'https://newfaviconaaaa'
+
+
+        let defaultTitle = document.title;
+        let faviconElement = document.querySelector("link[rel~='icon']");
+        let defaultFavicon = document.href;
+
+
+        let NotificationFavicon = 'https://asdasd'
+
+        let BellIconLink = getBellIconLink
+
+        let isInDefaultState = true;
+
+        let NotificationInterval
+
+        function startNotification(message) {
+            if (NotificationInterval) {
+                endNotification();
+            }
+            NotificationInterval = setInterval(() => {
+                if (isInDefaultState)
+                    setToNotification(message);
+                else
+                    resetToDefaults();
+
+                isInDefaultState = !isInDefaultState
+            }, 1000)
+        }
+        function endNotification() {
+            clearInterval(NotificationInterval)
+            resetToDefaults();
+        }
+
+        function resetToDefaults() {
+            document.title = defaultTitle;
+            faviconElement.href = defaultFavicon;
+        }
+        function setToNotification(message) {
+            document.title = message;
+            faviconElement = NotificationFavicon;
+        }
+        function getBellIconLink() {
+            const canvas = document.createElement(`canvas`)
+            canvas.width = 32;
+            canvas.height = 32;
+            const context = canvas.getContext('2d');
+            context.font = "32px sans-sherif";
+            context.filltext('🔔', 0, 30);
+
+            return canvas.toDataURL('image/png')
+        }
+    </script>
+</body>
+
+</html>

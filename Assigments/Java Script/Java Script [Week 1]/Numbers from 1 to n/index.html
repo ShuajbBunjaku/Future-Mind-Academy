@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Range</title>
+</head>
+
+<body>
+    <script>
+        let userInput = parseInt(prompt('Write a number from 1 - 100'));
+
+        if (isNaN(userInput) || userInput < 1 || userInput > 100) {
+            throw new Error('Please write a number from 1 - 100');
+        } else {
+            let numberString = '';
+            let currentNumber = 1;
+            
+            while(currentNumber <= userInput){
+                if(currentNumber !== 1){
+                    numberString += ', '
+                }
+                numberString += currentNumber
+                currentNumber++
+            }
+            console.log(numberString)
+        }
+    </script>
+</body>
+
+</html>
