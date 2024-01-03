@@ -41,7 +41,7 @@
 
         .progress-bar {
             position: absolute;
-            width: 100%;
+            width: 50%;
             background-color: green;
             transition: .4s ease;
         }
@@ -57,12 +57,8 @@
         <span class="indicator">100%</span>
     </div>
     <script>
-        function isAvalibalePercantage(number) {
-            if (number >= 0 && number <= 100) {
-                return true;
-            } else {
-                return false;
-            }
+        function isValidPercentage(number) {
+            return number >= 0 && number <= 100;
         }
 
         function getProgressColor(percentage) {
@@ -76,15 +72,29 @@
                 return 'green';
             }
         }
-        function modifyProgressBar() {
+
+        function modifyProgressBar(percentage, color) {
             let progressBar = document.getElementById('bar');
             progressBar.style.backgroundColor = color;
             progressBar.style.height = `${percentage}%`;
             progressBar.title = `${percentage}%`;
         }
-        function setProgress(){
-            
+
+        function setProgress(percentage){
+            if(isValidPercentage(percentage)){
+                let color = getProgressColor(percentage);
+                modifyProgressBar(percentage , color)
+            }
         }
+
+        function getRandomPercentage() {
+            return Math.floor(Math.random() * 101);
+        }
+
+        setInterval(() => {
+            let randomPercentage = getRandomPercentage();
+            setProgress(randomPercentage);
+        }, 2000);
     </script>
 </body>
 
