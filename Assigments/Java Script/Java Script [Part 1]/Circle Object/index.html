@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let radius = {
+            area: 12,
+            perimeter: 14,
+
+            getArea: function () {
+                this.area = Math.PI * this.radius ** 2;
+            },
+            getPerimeter: function () {
+                this.perimeter = 2 * Math.PI * this.radius;
+            },
+
+            center: {
+                x: 5,
+                y: 5,
+            },
+            getCenter: function () {
+                return this.center
+            },
+            setCenter: function (newCenter) {
+                this.center = newCenter
+            },
+            grow: function(number){
+                this.radius += number
+            },
+            shrink: function(number){
+                this.radius -= number
+            }
+        }
+
+    </script>
+</body>
+
+</html>
