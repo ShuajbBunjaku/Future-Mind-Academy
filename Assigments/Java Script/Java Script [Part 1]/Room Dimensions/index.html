@@ -4,54 +4,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Responsive Room</title>
     <style>
         body {
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana,
+                sans-serif;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100vh;
-            width: 100vw;
-            overflow: hidden;
-            display: grid;
-            place-items: center;
-        }
-        .height{
-            text-align: center;
-        }
-        .div2 {
-            background-color: blue;
-            text-align: center;
-            padding: 250px 350px;
         }
 
-        .div {
-            margin: auto;
+        h1 {
+            margin: 0;
+        }
+
+        .roomContainer {
+            background-color: rgb(0, 120, 160);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+            margin: 5vw;
+            box-sizing: border-box;
+        }
+
+        .roomDimension {
+            font-weight: bold;
+            position: absolute;
+        }
+
+        .widthDimension {
+            top: -35px;
+        }
+
+        .heightDimension {
+            left: -35px;
+            rotate: -90deg;
         }
     </style>
 </head>
 
 <body>
-    <div class="mainDiv">
-        <div class="height">Placeholder</div>
-        <div class="div2">
-            <div class="div">Area: <span id="areaID"></span></div>
-            <div class="div">Perimeter: <span id="perimeterSpan"></span></div>
-        </div>
-        <div class="height">Placeholder</div>
 
+    <div id="div">
+        <h1>Area: <span id="h1Span"></span></h1>
+        <h1>Perimeter: <span id="h1Span2"></span></h1>
+        <p id="p" class="roomDimension widthDimension">m</p>
+        <p id="p1" class="roomDimension heightDimension">m</p>
     </div>
     <script>
-        // let width  = parseFloat(prompt(`Whats the width of your room`))
-        // let length  = parseFloat(prompt(`Whats the length of your room`))
+        let width = parseFloat(prompt('Type the width of the room!'));
+        let height = parseFloat(prompt('Type the height of the room!'));
 
-        // if(length > width){
-        //     width = length
-        // }
+        if (height > width) {
+            [height, width] = [width, height]
+        }
+
+        let roomContainer = document.getElementById('div');
+
+        roomContainer.className = 'roomContainer';
+        roomContainer.style.width = width * 10 + 'vw';
+        roomContainer.style.height = height * 10 + 'vw';
+
+        let area = document.getElementById('h1Span');
+        let perimeter = document.getElementById('h1Span2');
+        let widthDimension = document.getElementById('p');
+        let heightDimension = document.getElementById('p1');
+
+        widthDimension.textContent = width + 'm';
+        heightDimension.textContent = height + 'm';
+        area.textContent = width * height + 'm²';
+        perimeter.textContent = (width + height) * 2 + 'm';
 
 
-
-        // let area = document.getElementById('areaID');
-        // area.textContent = length * width
     </script>
 </body>
 

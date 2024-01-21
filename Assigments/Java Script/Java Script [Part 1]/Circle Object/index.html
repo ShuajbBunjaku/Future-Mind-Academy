@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+    <title>Circle Object</title>
     <script>
-        let radius = {
-            area: 12,
-            perimeter: 14,
-
-            getArea: function () {
-                this.area = Math.PI * this.radius ** 2;
-            },
-            getPerimeter: function () {
-                this.perimeter = 2 * Math.PI * this.radius;
-            },
-
+        let circle= {
+            radius:20,
             center: {
-                x: 5,
-                y: 5,
+                x:5,
+                y:5
             },
-            getCenter: function () {
-                return this.center
+
+            getCenter: function(){
+                return this.center;
             },
-            setCenter: function (newCenter) {
-                this.center = newCenter
+            
+            setCenter: function(center){
+                this.center=center;
+            },
+
+            getRadius: function(){
+                return this.radius;
+            },
+            setRadius: function(radius){
+                this.radius=radius;
+            },
+            getArea: function(){
+                return 3.14 *(this.radius * this.radius)
+            },
+            getPerimeter:function(){
+                return this.radius *3.14;
             },
             grow: function(number){
-                this.radius += number
+                this.radius +=number;
             },
+
             shrink: function(number){
-                this.radius -= number
+                this.radius -=number;
+            },
+            printDetails :function(){
+                console.log("Circle Detalis:");
+                console.log("Radius:", this.getradius());
+                console.log("Center Position:", this.getcenter());
             }
+
+        
         }
-
+        circle.printDetails();
+        
     </script>
+</head>
+<body>
+    
 </body>
-
 </html>

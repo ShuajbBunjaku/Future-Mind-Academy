@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            place-content: center;
+        }
+
+        h1 {
+            color: white;
+            padding: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="alert"></h1>
+    <script>
+        let display = document.getElementById('alert');;
+        display.textContent = 'You are Online'
+        display.style.backgroundColor = 'black'
+
+        window.addEventListener('offline', () => {
+            display.textContent = 'You are Offline'
+            display.style.backgroundColor = 'red'
+
+        })
+
+        window.addEventListener('online', () => {
+            display.textContent = 'You are Online'
+            display.style.backgroundColor = 'black'
+        })
+    </script>
+</body>
+
+</html>
