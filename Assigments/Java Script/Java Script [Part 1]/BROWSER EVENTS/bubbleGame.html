@@ -1,38 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             height: 100vh;
             width: 100vw;
             margin: 0;
             overflow: hidden;
         }
-        .bubble { 
+
+        .bubble {
             position: fixed;
             border-radius: 50%;
+            animation: bounce 5s infinite;
+        }
+
+        @keyframes bounce {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0)
+            }
         }
     </style>
 </head>
+
 <body>
     <script>
-        for(let i = 0; i < 300; i++){
+        for (let i = 0; i < 5; i++) {
             let bubble = document.createElement('div');
             bubble.classList.add('bubble')
-            let widthAndHeight = Math.floor(Math.random() * 101 ) + 'px';
+            let widthAndHeight = Math.floor(Math.random() * 101) + 60 + 'px';
             bubble.style.height = widthAndHeight;
             bubble.style.width = widthAndHeight;
-            bubble.style.left = Math.floor(Math.random() * 101 ) + 'vw';
-            bubble.style.top = Math.floor(Math.random() * 101 )+ 'vh';
+            bubble.style.left = Math.floor(Math.random() * 101) + 'vw';
+            bubble.style.top = Math.floor(Math.random() * 101) + 'vh';
 
 
-            function randomColor(){
-                let color1 = Math.floor(Math.random() * 255 );
-                let color2 = Math.floor(Math.random() * 255 );
-                let color3 = Math.floor(Math.random() * 255 );
+            function randomColor() {
+                let color1 = Math.floor(Math.random() * 255);
+                let color2 = Math.floor(Math.random() * 255);
+                let color3 = Math.floor(Math.random() * 255);
                 let result = `rgba(${color1},${color2},${color3}, 0.5`
                 return result
             }
@@ -41,6 +59,17 @@
 
             document.body.appendChild(bubble)
         }
+        document.body.addEventListener('click', (e) => {
+
+            if (e.target.classList.contains('bubble')) {
+                e.target.remove();
+            }
+            if (document.querySelectorAll('.bubble').length === 0) {
+                alert('Congratulations! You popped all the bubbles and won the game!');
+            }
+        })
+
     </script>
 </body>
+
 </html>

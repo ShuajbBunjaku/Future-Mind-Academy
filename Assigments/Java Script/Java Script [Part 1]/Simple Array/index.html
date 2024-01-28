@@ -5,18 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body {
+            background-color: blue;
+        }
+    </style>
 </head>
 
 <body>
+    <h1>Task list</h1>
+    <ul id="taskList"></ul>
     <script>
         let userInput;
         let taskList = [];
-        for (let i = 0; i < 5; i++) {
-            userInput = prompt('Write a task for today')
-            
-            taskList.push(userInput)
-        }
-        console.log(taskList)
+            for (let i = 0; i < 5; i++) {
+                userInput = prompt('Write a task for today')
+
+                taskList.push(userInput)
+            }
+
+
+            let listContainer = document.getElementById('taskList')
+
+            taskList.forEach (task => {
+                let listItem = document.createElement('li') 
+
+                listItem.textContent = task;
+                listContainer.appendChild(listItem)
+            })
+
     </script>
 </body>
 
