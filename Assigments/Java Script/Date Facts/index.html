@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Facts</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f8f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #content {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      text-align: center;
+      max-width: 400px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #4caf50;
+      color: #fff;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #facts {
+      margin-top: 20px;
+      text-align: left;
+    }
+
+    .fact {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h2>Enter Your Date of Birth</h2>
+    <input type="date" id="date" />
+    <button onclick="getBirthdayFacts()">Get Facts</button>
+    <div id="facts"></div>
+  </div>
+
+  <script>
+    async function fetchingBirthdayFacts(month, day) {
+      const url = `https://numbersapi.p.rapidapi.com/${month}/${day}/date?fragment=true&json=true`;
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": "090c87be80mshd840eed372f8119p14ee5fjsn697780abba72",
+          "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
+        },
+      };
+
+      try {
+        const response = await fetch(url, options);
+        const result = await response.text();
+        return result;
+      } catch (error) {
+        console.error(error);
+        return "Failed to fetch data. Please try again.";
+      }
+    }
+
+    async function getBirthdayFacts() {
+      let birthday = document.getElementById("date");
+      let date = birthday.value;
+      let splittedDate = date.split("-");
+
+      let month = splittedDate[1];
+      let day = splittedDate[2];
+
+      let outputElement = document.getElementById("facts");
+      outputElement.innerHTML = "";
+
+      let factPromises = [];
+      for (let i = 0; i < 3; i++) {
+        factPromises.push(fetchingBirthdayFacts(month, day));
+      }
+
+      try {
+        const factTexts = await Promise.all(factPromises);
+
+        for (let i = 0; i < 3; i++) {
+          let factObject = JSON.parse(factTexts[i]);
+
+          let factElement = document.createElement("div");
+          factElement.classList.add("fact");
+          factElement.textContent = `Fact ${i + 1}: ${factObject.text}`;
+          outputElement.appendChild(factElement);
+        }
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+  </script>
+</body>
+
+</html>

@@ -17,7 +17,23 @@ body {
     background-color: rgba(0, 0, 0, .4);
     color: aliceblue;
     padding: 1em;
-    width: 250px;
+}
+
+.aside .collapsed {
+    width: 100px;
+}
+
+.collapsed {
+    width: 70px;
+}
+
+
+.collapsed .description {
+    display: none
+}
+
+.collapsed .dropdown {
+    display: none;
 }
 
 .hoverEffect:hover {
@@ -36,13 +52,49 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
-    padding: 0 10px;
+}
+
+.info .collapsed {
+    padding: 15px;
 }
 
 .info p {
     font-size: 1.18em;
     font-weight: 500;
     margin-right: 10px;
+}
+
+.info1 {
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.info1 p {
+    margin-left: 1em;
+}
+
+.hidden1 {
+    display: none;
+}
+
+.rotate1 {
+    transition: transform .2s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.rotate {
+    transition: transform .2s ease-in-out;
+    transform: rotate(180deg);
+}
+
+
+.avatar,
+.special {
+    margin-left: 0.7em;
+    height: 60px;
 }
 
 .avatar {
@@ -56,6 +108,14 @@ body {
 
 .avatar p {
     margin-left: 10px;
+}
+
+.margin1 {
+    margin-left: 0px;
+}
+
+.avatar .collapsed span {
+    padding: 15px;
 }
 
 .pfp {
@@ -182,13 +242,12 @@ body {
     display: none;
 }
 
-.notifications:hover .hidden {
+.hidden {
     font-size: 1em;
     top: 25px;
     right: 110px;
     background-color: rgb(228, 228, 228);
     position: absolute;
-    display: block;
 }
 
 .hidden p {
@@ -544,7 +603,6 @@ body {
 .footerDiv1Div {
     word-spacing: 10px;
 }
-
 
 @media (max-width:1000px) {
     .aside {

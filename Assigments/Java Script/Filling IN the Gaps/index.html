@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body.dark-mode {
+            background-color: black;
+            color: white;
+        }
+
+        body {
+            transition: background-color 1s ease;
+        }
+    </style>
+</head>
+
+<body id="body">
+    <button id="darkModeBtn">Dark Mode</button>
+    <h1>Hello world</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vel debitis reprehenderit dolores laborum
+        numquam? Quos, expedita nesciunt. Laudantium necessitatibus ea ut dignissimos corporis minus voluptas eos
+        mollitia praesentium illum aspernatur animi facilis quam dolorem quidem dolorum ducimus accusantium, distinctio
+        quia! Iure alias provident consectetur corporis, minus, perferendis repellat reprehenderit inventore asperiores
+        blanditiis ducimus itaque porro nam commodi facilis veritatis nisi, at similique. Delectus, quis ut consequuntur
+        ipsum quas provident dolorem, eum, iure deserunt quia ratione ea impedit dignissimos dolore ab harum nisi eos
+        perspiciatis laborum! Minus eum vitae iste molestias molestiae dolor saepe officiis odio, ipsa alias. Iure illum
+        consectetur, nobis enim eum, laborum vero in, nisi corporis temporibus eveniet beatae quam. Atque asperiores
+        dignissimos quisquam dicta ratione quidem, exercitationem odit sunt cum accusamus hic molestiae? Maxime sint
+        quos, neque unde, modi vero omnis quas velit quidem tempora quia dolorum officia deleniti aperiam excepturi
+        soluta perferendis iusto ullam vel pariatur, ducimus aliquam ea. Expedita excepturi minima saepe, quisquam
+        dignissimos modi voluptatem. Nam quia quibusdam iure placeat veniam aut perspiciatis maiores esse recusandae
+        cupiditate repudiandae molestiae ratione consectetur illo praesentium velit, et veritatis suscipit impedit ab
+        asperiores dicta! Nostrum suscipit officiis quam unde hic dicta iste, ut expedita, accusantium veniam, fugiat
+        cum a illum adipisci neque tenetur qui reprehenderit amet impedit et. Doloremque asperiores autem voluptates
+        dicta molestias ipsum doloribus, totam neque, qui dolore repudiandae sint vel suscipit dolorem. Maxime vero
+        beatae sunt repudiandae, aliquid rerum ipsam magni, rem asperiores iure incidunt! Reprehenderit repellat velit
+        error labore aperiam voluptatum sed.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dicta voluptatibus facilis, reiciendis veniam
+        dolorem nesciunt error nemo ducimus temporibus, quasi perspiciatis assumenda ratione illum aliquam voluptatum
+        quae harum nam illo cum. Libero consequatur deleniti iste, inventore, error laudantium eos eligendi quaerat,
+        dignissimos nesciunt id aspernatur dolorum ipsam obcaecati. Perferendis consectetur cum, et quod repudiandae
+        praesentium, inventore iste dignissimos quidem facere nam laborum voluptas debitis at mollitia necessitatibus
+        autem asperiores repellendus in tempore excepturi adipisci? Debitis iste repellat pariatur minus voluptatem eius
+        laudantium perferendis natus voluptatum deserunt mollitia ducimus officiis asperiores rem quaerat doloremque,
+        labore itaque laborum rerum quidem tempora blanditiis sunt, praesentium laboriosam! Libero, aut molestiae natus
+        impedit fugiat quo cum perferendis omnis, velit architecto earum nemo iusto molestias corrupti reiciendis! Harum
+        ducimus autem a sunt molestiae quaerat eligendi enim ea deserunt ipsa eveniet cupiditate, at quam officia dolore
+        nostrum repudiandae modi dicta. Doloribus possimus culpa sequi repellendus voluptas natus vero dolores rerum ad
+        excepturi nesciunt odio corrupti facere, accusamus quod similique fugit impedit maiores eaque error reiciendis
+        corporis voluptatum! Corrupti, magnam dolorem at cum hic eum, ullam ea non, iusto veniam earum eaque nisi! Minus
+        quas nemo, inventore necessitatibus recusandae accusantium consectetur ab dolores libero perferendis deserunt
+        corporis quia modi? Quam dignissimos odit nostrum vitae, quia delectus voluptates est harum repudiandae
+        expedita, odio asperiores doloribus aut molestiae. Voluptatibus cumque natus necessitatibus mollitia ullam
+        exercitationem dignissimos sint ratione reprehenderit, quis consequuntur accusantium hic voluptas ex voluptatem
+        repudiandae corrupti minima harum quo, delectus excepturi quia. Aliquam aliquid impedit ullam sint?
+    </p>
+
+
+    <script>
+        let savedTheme = localStorage.getItem('dark-mode');
+
+
+        if (savedTheme === 'dark-mode') {
+            document.body.classList.add('dark-mode')
+        }
+
+        let darkModeBtn = document.getElementById('darkModeBtn');
+        let body = document.getElementById('body');
+
+        darkModeBtn.addEventListener('click', () => {
+
+            body.classList.toggle('dark-mode');
+
+            let currentTheme = document.body.contains('dark-mode') ? 'dark' : 'light';
+
+            localStorage.setItem('dark-mode', currentTheme)
+
+        })
+    </script>
+</body>
+
+</html>
