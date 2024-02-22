@@ -20,7 +20,8 @@
             padding: 10px;
         }
 
-        .divFlex , .total {
+        .divFlex,
+        .total {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
@@ -98,32 +99,35 @@
         let totalPriceElement = document.getElementById('totalPrice');
 
 
-        cart.forEach((item => {
+        cart.forEach((items => {
             let cartItem = document.createElement('div');
             cartItem.classList.add('divFlex');
 
             let itemDetails = document.createElement('div');
+
+
             let title = document.createElement('h3');
-            title.textContent = item.title;
-
             let category = document.createElement('h3');
-            category.textContent = `Category: ${item.category}`
-
-            let price = document.createElement('p');
-            price.textContent = `Item price: $${item.price}`;
-
+            let price = document.createElement('p')
             let totalItemPrice = document.createElement('h3');
-            totalItemPrice.textContent = `Total Item Price: $${(item.price * item.quantity).toFixed(2)}`
+
+            title.textContent = items.title;
+
+            category.textContent = `Category: ${items.category}`;
+            price.textContent = `Price: ${items.price}`;
+            totalItemPrice.textContent = `Total Price of Products: $${(items.quantity * items.price).toFixed(2)}`
+
 
 
             itemDetails.appendChild(title);
             itemDetails.appendChild(category);
             cartItem.appendChild(itemDetails);
-            cartItem.appendChild(price);
-            cartItem.appendChild(totalItemPrice)
-            cartContainer.appendChild(cartItem);
-        })
-        )
+            totalItemPrice.appendChild(price)
+            cartItem.appendChild(totalItemPrice);
+            cartContainer.appendChild(cartItem)
+
+        }
+        ))
         totalPriceElement.textContent = `$${sum.toFixed(2)}`
 
     </script>
