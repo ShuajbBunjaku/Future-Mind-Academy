@@ -10,6 +10,7 @@
             display: flex;
             justify-content: center;
         }
+
         .timerBtn {
             width: 80px;
             height: 30px;
@@ -34,7 +35,7 @@
             background-color: #222222;
             margin-top: 20px;
             padding: 10px;
-            width: fit-content ;
+            width: fit-content;
         }
 
         #lapContainer {
@@ -51,7 +52,7 @@
         <button id="pauseBtn" class="timerBtn">Pause</button>
         <button id="resetBtn" class="timerBtn">Reset</button>
         <button id="lapBtn" class="timerBtn">Lap</button>
-    <div id="lapContainer"></div>
+        <div id="lapContainer"></div>
 
     </div>
     <script>
@@ -102,9 +103,10 @@
         });
 
         lapBtn.addEventListener('click', () => {
+            updateTime()
             if (intervalID) {
                 const lapTime = elapsedTime;
-                laps.unshift({ lapTime, lapNumber: ++lapCount }); // Save lap number along with lap time
+                laps.unshift({ lapTime, lapNumber: ++lapCount });
                 displayLaps();
             }
         });
@@ -144,6 +146,7 @@
             const millis = milliseconds % 1000;
 
             return `${minutes}:${String(seconds).padStart(2, '0')}:${String(millis).padStart(3, '0')}`;
+
         }
     </script>
 </body>
