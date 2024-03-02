@@ -229,7 +229,6 @@ body {
     right: 5px;
     color: white;
     border: 1px solid white;
-    background-color: red;
     border-radius: 50%;
     padding: 2px;
 }
@@ -259,7 +258,6 @@ body {
 }
 
 .red {
-    background-color: rgba(255, 0, 0, 0.658);
     cursor: pointer;
 }
 
@@ -586,6 +584,99 @@ body {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+}
+
+#settings h3,
+#settings div {
+    text-align: center;
+}
+
+.image {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.padding {
+    padding: 10px;
+}
+
+.postitionFixed {
+    position: fixed;
+    top: 30vh;
+    right: 20px;
+    background-color: rgba(128, 128, 128, 0.5);
+    padding: 10px;
+    border-right: 2px solid #ECECEC;
+    border-top-left-radius: 40px;
+    border-bottom-left-radius: 40px;
+}
+
+.round {
+    border-radius: 50%;
+}
+
+.purple1 {
+    background-color: purple;
+}
+
+.blue1 {
+    background-color: blue;
+}
+
+.green1 {
+    background-color: green;
+}
+
+.orange1 {
+    background-color: orange;
+}
+
+.red1 {
+    background-color: red;
+}
+
+.pink1 {
+    background-color: pink;
+}
+
+.black {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: black;
+}
+
+.white1 {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.images {
+    width: 150px;
+    border-radius: 15px;
+}
+
+.selected {
+    border: 3px solid black;
+}
+
+#settings {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: fixed;
+    right: 4vw;
+    top: 10vh;
+    background: rgb(237, 237, 237);
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.settingsNone {
+    display: none;
+}
+
+.activeBall {
+    border: 2px solid white;
 }
 
 .footerDiv {

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" ;>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="styles.css">
@@ -24,7 +24,7 @@
         <div class="info hoverEffect expand">
             <div class="avatar margin1 ">
                 <img class="pfp" src="assets/images/avatar.jpg" alt="Avatar">
-                <p class="description">John Doe</p>
+                <p class="description" id="name">John Doe</p>
             </div>
             <span class="material-symbols-outlined dropdown   rotate1 arrow ">
                 expand_more
@@ -46,7 +46,7 @@
                 </span>
                 <p class="description">Pages</p>
             </div>
-            <div class="dropdown"> 
+            <div class="dropdown">
                 <span class="material-symbols-outlined dropdown  rotate1 arrow">
                     expand_more
                 </span>
@@ -317,7 +317,7 @@
         <main>
             <section class="section2">
                 <div class="displayI">
-                    <span class="material-symbols-outlined icon" title="Statisics">
+                    <span class="material-symbols-outlined icon" title="statistics">
                         language
                     </span>
                     <h2>Global Sales by Top Locations</h2>
@@ -449,9 +449,42 @@
                     </div>
                 </div>
             </section>
-            <h2 class="listings">Manage Lisiting</h2>
+            <h2 class="listings">Manage Listing</h2>
             <section class="section4" id="section4">
 
+            </section>
+            <section id="settings">
+                <span class="material-symbols-outlined postitionFixed cursor">
+                    settings
+                </span>
+                <div id="settingsNone" class="padding">
+                    <h3>Colors</h3>
+                    <div class="image color">
+                        <div class="round purple1 cursor" data-color="#0000ff"></div>
+                        <div class="round blue1 cursor" data-color="#0000ff"></div>
+                        <div class="round green1 cursor" data-color="#0000ff"></div>
+                        <div class="round orange1 cursor" data-color="#0000ff"></div>
+                        <div class="round red1 cursor" data-color="#0000ff"></div>
+                        <div class="round pink1 cursor" data-color="#0000ff"></div>
+                    </div>
+                    <hr>
+                    <h3>Sidebar Color</h3>
+                    <div class="image backgroundColor">
+                        <div class="round black cursor"></div>
+                        <div class="round white1 cursor"></div>
+                    </div>
+                    <hr>
+                    <div class="image">
+                        <h3>Sidebar images</h3>
+                        <input type="checkbox" class="checkbox" checked>
+                    </div>
+                    <hr>
+                    <h3>Images</h3>
+                    <div class="image">
+                        <img src="assets/images/sidebar-1.jpg" alt="Background 1" class="images cursor" />
+                        <img src="assets/images/sidebar-2.jpg" alt="Background 2" class="images cursor" />
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="footer">
@@ -462,7 +495,10 @@
             </div>
         </footer>
     </div>
-    <script src="./js/index.js" type="module"></script>
+    <script src="./js/notifications.js"></script>
+    <script src="./js/sidebar.js"></script>
+    <script src="./js/listings.js"></script>
+    <script src="./js/settings.js"></script>
 </body>
 
 </html>

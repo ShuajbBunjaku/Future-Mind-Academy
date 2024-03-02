@@ -1,4 +1,4 @@
-import * as Notifications from './notifications.js';
-import * as Lisiting from './listings.js';
-import * as Settings from './settings.js';
-import * as Sidebar from './sidebar.js';
+import * as Notifications from './js/notifications.js';
+import * as Lisiting from './js/listings.js';
+import * as Settings from './js/settings.js';
+import * as Sidebar from './js/sidebar.js';

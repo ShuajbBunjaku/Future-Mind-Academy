@@ -1,0 +1,11 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "javascript settings",
+  "steps": [
+    {
+      "file": "Projects/Java Script/js/settings.js",
+      "description": "create div\r\n",
+      "line": 51
+    }
+  ]
+}

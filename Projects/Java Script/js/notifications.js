@@ -7,7 +7,6 @@ let defaultNotifications = [
 
 ]
 
-
 localStorage.setItem("notifications", JSON.stringify(defaultNotifications));
 
 
@@ -26,7 +25,6 @@ notifications.forEach((notifications) => {
 let notifaciconsNumberHtml = document.getElementById(`notification5`);
 notifaciconsNumberHtml.textContent = notifications.length;
 
-//onclick
 
 let notificationsDiv = document.getElementById('notificationDiv');
 let notificationsMsg = document.getElementById('notifications')
