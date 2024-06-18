@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Quiz 1</h1>
+    <h1>Points <span id="pointsDiv">0</span></h1>
+    <ol id="questionList">
+    </ol>
+
+    <script src="questions.js"></script>
+
+    <script>
+        const questionList = document.querySelector('#questionList');
+        const pointCounter = document.querySelector('#pointsDiv')
+        let counter = 0
+        let questionHtml = '';
+
+        function optionsForLoop(questionIndex) {
+            let optionsHtml = '';
+            for (let i = 0; i < allQuestions[questionIndex].options.length; i++) {
+                optionsHtml += `
+                <li onclick="isCorrect('${allQuestions[questionIndex].options[i]}', ${questionIndex})">
+                    <a href='#'>${allQuestions[questionIndex].options[i]}</a>
+                </li>`;
+            }
+            return optionsHtml;
+        }
+
+        // function isCorrect(selectedOption, questionIndex) {
+        //     if (selectedOption === allQuestions[questionIndex].answer) {
+        //         counter++
+        //         pointCounter.textContent = counter
+        //     } else {
+        //         counter--;
+        //         pointCounter.textContent = counter
+        //     }
+        // }
+
+        for (let i = 0; i < allQuestions.length; i++) {
+            questionHtml += `
+                <li>${allQuestions[i].question}
+                    <ol>
+                        ${optionsForLoop(i)}
+                    </ol>
+                </li>
+            `;
+        }
+
+        questionList.innerHTML = questionHtml;
+
+    </script>
+</body>
+
+</html>

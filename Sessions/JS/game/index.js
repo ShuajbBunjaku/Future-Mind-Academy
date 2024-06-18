@@ -1,5 +1,3 @@
-function startGame(){
-
     document.addEventListener('keydown', (e) => {
     
         if ((e.key == 'ArrowUp')|| (e.key == 'w') ) { 
@@ -21,7 +19,6 @@ function startGame(){
     }
     const timerInterval =   setInterval(timer, 1000)
     
-    }
     const canvas = document.querySelector('#canvas');
     const ctx = canvas.getContext("2d")
     const bgGame = new Image();
@@ -37,7 +34,8 @@ function startGame(){
     }
     
     let catObj = {}
-    
+    catObj.width = 120;
+    catObj.height = 120
     catObj.x = 332;
     catObj.y = 300;
     catObj.speed = 5;
@@ -95,39 +93,53 @@ function startGame(){
         } else if (catObj.y < -catImg.height) {
             catObj.y = canvas.height;
         }
-    
-    
-        if (
-            catObj.x < mouseObj.x + mouseObj.width &&
-            catObj.x + catImg.width > mouseObj.x &&
-            catObj.y < mouseObj.y + mouseObj.height &&
-            catObj.y + catImg.height > mouseObj.y
-        ) {
-            points++;
-            ticTimer += 1
-    
+        
+        if(
+            (catObj.x + catObj.width) > mouseObj.x &&
+            (catObj.y + catObj.height) > mouseObj.y &&
+            (catObj.x + 20) < (mouseObj.x + mouseObj.width )&&
+            (catObj.y + 20) < (mouseObj.y + mouseObj.height)
+
+        ){
+            if(ticTimer !== 0){
+                points++;
+                ticTimer += 1
+            }
+                
             mouseObj.x = Math.floor(Math.random() * 460);
-            mouseObj.y = Math.floor(Math.random() * 426);
-        }   
+            mouseObj.y = 30 + Math.floor(Math.random() * 426) ;
+
+        }
+        
+        if(ticTimer == 0){
+            mouseObj.x = 700;
+            if(points >= 3){
+                ctx.fillStyle = 'white'
+                ctx.fillText('You Win', 220, 200)
+            }else{
+                ctx.fillStyle = 'red'
+                ctx.fillText('You loose', 220,200)
+            }
+        }
+
     
         ctx.font = '20px georgia';
         ctx.fillStyle = 'white';
         ctx.fillText(`Points: ${points}`, 10 , 25)
         ctx.fillText(`Timer : ${ticTimer}`, 400, 25)
     
-        if((points === 0)&&(ticTimer === 0)){
-            ctx.fillText('You Lost',195,25)
-        }else if((points === 0)&&(ticTimer !== 0)){
-            ctx.fillText('', 195, 25)
-        }else if((points !== 0)&&(ticTimer > 0)){
-            ctx.fillText('', 195, 25)
-        }else{
-        ctx.fillText('You won',195,25)
-        }
+        // if((points === 0)&&(ticTimer === 0)){
+        //     ctx.fillText('You Lost',195,25)
+        // }else if((points === 0)&&(ticTimer !== 0)){
+        //     ctx.fillText('', 195, 25)
+        // }else if((points !== 0)&&(ticTimer > 0)){
+        //     ctx.fillText('', 195, 25)
+        // }else{
+        // ctx.fillText('You won',195,25)
+        // }
         
         if(points >= 10){
         ctx.fillText('You won',195,25)
         }
     }
     setInterval(render, 1)
-    

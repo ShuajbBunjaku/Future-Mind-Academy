@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="startTimer()">Start Timer</button>
+    <h1>Timer: <span id="countdown">10</span></h1>
+
+    <script>
+        const countDowm = document.querySelector('#countdown')
+        let count = 10;
+
+        function startTimer() {
+            let intervalId = setInterval(() => {
+                countDowm.textContent = count;
+                if (count == 0) {
+                    clearInterval(intervalId)
+                } else {
+                    count--
+                }
+            }, 1000)
+        }
+    </script>
+</body>
+
+</html>
