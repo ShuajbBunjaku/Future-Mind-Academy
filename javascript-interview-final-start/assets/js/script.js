@@ -1,6 +1,7 @@
 const movieGernes = document.querySelector('.movieGernes');
 const movielist = document.querySelector('.movielist');
 const movieDetailsPage = document.querySelector('.movie-details-page')
+const play = document.querySelector('.play')
 
 
 loadMovies(0);
@@ -49,11 +50,27 @@ function loadMovieDetail(g, m ,activeMovie) {
             <p>${currentMovie.desc}</p>
         `
 
-        for(let i = 0; i < movielist.children.length; i++){
-            movielist.children[i].classList.remove('selected-movie')
+
+
+        document.querySelectorAll('.selected-movie').forEach(movie => movie.classList.remove('selected-movie'));
+        if (activeMovie) {
+            activeMovie.classList.add('selected-movie');
         }
-        activeMovie.classList.add('selected-movie')
 }
 
+play.addEventListener('click', ()=>{
+    let intervalId = setInterval(randomiseMovie , 2000)
+    play.classList.toggle('play');
+    if (play.classList.contains('play')) {
+        intervalId = setInterval(shuffleArray, 3000); 
+    } else {
+        clearInterval(intervalId);
+    }
+})
 
+function randomiseMovie() {
+    let randomGenreIndex = Math.floor(Math.random() * allMovies.length);
+    let randomMovieIndex = Math.floor(Math.random() * allMovies[randomGenreIndex].movies.length);
 
+    loadMovieDetail(randomGenreIndex, randomMovieIndex);
+}
