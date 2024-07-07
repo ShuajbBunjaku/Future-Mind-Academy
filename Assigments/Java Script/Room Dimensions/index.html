@@ -60,25 +60,30 @@
         let width = parseFloat(prompt('Type the width of the room!'));
         let height = parseFloat(prompt('Type the height of the room!'));
 
+
+
         if (height > width) {
             [height, width] = [width, height]
         }
 
-        let roomContainer = document.getElementById('div');
 
-        roomContainer.className = 'roomContainer';
-        roomContainer.style.width = width * 10 + 'vw';
-        roomContainer.style.height = height * 10 + 'vw';
 
-        let area = document.getElementById('h1Span');
-        let perimeter = document.getElementById('h1Span2');
-        let widthDimension = document.getElementById('p');
-        let heightDimension = document.getElementById('p1');
+        let areaSpan = document.querySelector('#h1Span');
+        let perimeterSpan = document.querySelector('#h1Span2');
+        let widthDimension = document.querySelector('#p');
+        let heightDimension = document.querySelector('#p1');
+        let roomContainer = document.querySelector('#div')
 
+
+        areaSpan.textContent = width * height;
+        perimeterSpan.textContent = (width * 2) + (height * 2);
         widthDimension.textContent = width + 'm';
         heightDimension.textContent = height + 'm';
-        area.textContent = width * height + 'm²';
-        perimeter.textContent = (width + height) * 2 + 'm';
+
+        roomContainer.className = 'roomContainer'
+        roomContainer.style.width = width * 8 + 'vw'
+        roomContainer.style.height = height * 4 + 'vw'
+
 
 
     </script>

@@ -60,11 +60,10 @@ function loadMovieDetail(g, m ,activeMovie) {
 
 play.addEventListener('click', ()=>{
     let intervalId = setInterval(randomiseMovie , 2000)
-    play.classList.toggle('play');
-    if (play.classList.contains('play')) {
-        intervalId = setInterval(shuffleArray, 3000); 
-    } else {
-        clearInterval(intervalId);
+    play.classList.add('shuffle');
+    if (play.classList.contains('shuffle')) {
+        clearInterval(intervalId)
+        play.classList.remove('shuffle')
     }
 })
 

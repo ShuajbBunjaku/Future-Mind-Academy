@@ -1,0 +1,21 @@
+* { box-sizing: border-box; }
+
+#movieThumb {
+    display: flex;
+    gap: 1rem;
+    overflow-x: scroll;
+    width: 1450px;
+}
+
+#movieThumb li  {
+    list-style-type: none;
+    text-align: center;
+}
+
+
+.container {
+    position: relative;
+     overflow: hidden;
+     width: 100%;
+     padding-top: 56.25%;
+}

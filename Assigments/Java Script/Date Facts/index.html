@@ -76,7 +76,7 @@
           "X-RapidAPI-Host": "numbersapi.p.rapidapi.com",
         },
       };
-
+      console.log(url, options)
       try {
         const response = await fetch(url, options);
         const result = await response.text();
@@ -88,9 +88,9 @@
     }
 
     async function getBirthdayFacts() {
-      let birthday = document.getElementById("date");
+      const birthday = document.querySelector('#date');
       let date = birthday.value;
-      let splittedDate = date.split("-");
+      let splittedDate = date.split('-')
 
       let month = splittedDate[1];
       let day = splittedDate[2];
@@ -98,13 +98,13 @@
       let outputElement = document.getElementById("facts");
       outputElement.innerHTML = "";
 
-      let factPromises = [];
+      let holdFact = [];
       for (let i = 0; i < 3; i++) {
-        factPromises.push(fetchingBirthdayFacts(month, day));
+        holdFact.push(fetchingBirthdayFacts(month, day))
       }
 
       try {
-        const factTexts = await Promise.all(factPromises);
+        const factTexts = await Promise.all(holdFact);
 
         for (let i = 0; i < 3; i++) {
           let factObject = JSON.parse(factTexts[i]);
@@ -115,7 +115,7 @@
           outputElement.appendChild(factElement);
         }
       } catch (error) {
-        console.error(error);
+        console.log(error);
       }
     }
 
