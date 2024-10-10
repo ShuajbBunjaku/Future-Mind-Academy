@@ -50,8 +50,6 @@ function loadMovieDetail(g, m ,activeMovie) {
             <p>${currentMovie.desc}</p>
         `
 
-
-
         document.querySelectorAll('.selected-movie').forEach(movie => movie.classList.remove('selected-movie'));
         if (activeMovie) {
             activeMovie.classList.add('selected-movie');
