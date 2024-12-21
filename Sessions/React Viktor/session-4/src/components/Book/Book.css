@@ -1,0 +1,24 @@
+
+.Card {
+    height: 200px;
+    width: 33%;
+    
+    display: grid;
+    grid-template-rows: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5rem;
+
+    border-radius:  10px;
+    box-shadow:  1px 1px 10px 3px #aeaeae55;
+    padding: 1rem;
+}
+
+
+
+.Card-Header {
+    margin-top: 0;
+}
+.Card-SubHeader{
+    margin-top: 0;
+    color: grey;
+}
