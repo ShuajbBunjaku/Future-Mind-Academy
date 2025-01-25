@@ -2,10 +2,15 @@ import './App.css';
 import React, { useEffect, useState } from 'react'
 import Quiz from './components/Quiz/Quiz';
 import { mockFetch } from './utils/utils';
+import { useParams } from 'react-router-dom';
 
 function App() {
+    
+    const {quizId, questionId} = useParams()
+
     const [questions, setQuestions] = useState([]);
-    const [quiz, setQuiz] = useState(1);
+    const [quiz, setQuiz] = useState(parseInt(quizId));
+    
     
     useEffect(() => {
         mockFetch(`quiz/${quiz}`)
@@ -15,7 +20,7 @@ function App() {
 
     return (
         <div className='Center-Content'>
-            <Quiz quiz={quiz} questions={questions} onNext={() => setQuiz(quiz => quiz + 1)}></Quiz>
+            <Quiz quiz={quiz} questions={questions} ></Quiz>
         </div>
     )
 }

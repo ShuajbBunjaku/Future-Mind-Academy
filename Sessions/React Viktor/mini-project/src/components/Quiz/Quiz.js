@@ -1,8 +1,9 @@
 import "./Quiz.css";
 import React, { useEffect, useState } from "react";
 import { mockFetch } from "../../utils/utils";
+import { Navigate } from "react-router-dom";
 
-function Quiz({ quiz, questions, onNext }) {
+function Quiz({ quiz, questions }) {
   const [index, setIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [results, setResults] = useState([]);
@@ -57,7 +58,7 @@ function Quiz({ quiz, questions, onNext }) {
         <div
           key={i}
           className={`Quiz-Dot ${i === index ? "currentQuestion" : ""}
-          ${ finished ? (results[i] ? "Dots-Correct" : "Dots-Incorrect") : ""}  
+          ${finished ? (results[i] ? "Dots-Correct" : "Dots-Incorrect") : ""}  
           `}
         ></div>
       );
@@ -88,7 +89,7 @@ function Quiz({ quiz, questions, onNext }) {
           ></input>
           {index == questions.length - 1 ? (
             finished ? (
-              <button className="Quiz-Button" onClick={onNext}>
+              <button className="Quiz-Button" onClick={() => Navigate('/quiz/{quiz + 1}')}>
                 Next Quiz
               </button>
             ) : (
